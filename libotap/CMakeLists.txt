@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(libotap VERSION 0.1.0 LANGUAGES CXX)
+# include(CTest)
+# enable_testing()
+
+file(GLOB_RECURSE LIBOTAP_SRC "src/*.cpp" "src/*.c"  "src/*.h" "src/*.hpp")
+add_library(libotap ${LIBOTAP_SRC})
+set_target_properties(libotap PROPERTIES LINKER_LANGUAGE CXX)
+# set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+# set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+# include(CPack)
